@@ -1,0 +1,10 @@
+Title: Earth Science
+Description: Quiz 1
+--------------------------------------------------
+Q1: What is the third planet from the Sun?
+a) Mercury
+b) Venus
+c) Earth
+d) Mars
+Correct Answer: c
+--------------------------------------------------
