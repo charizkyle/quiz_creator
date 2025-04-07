@@ -5,7 +5,13 @@ def create_quiz():
     question_counter = 1
     while True:
         print(f"\nQuestion {question_counter}:")
-        question_text = input("Enter a question: ")
+        question_text = input("Enter the question: ")
+        print("Enter 4 options:")
+        a = input("a) ")
+        b = input("b) ")
+        c = input("c) ")
+        d = input("d) ")
+
         print("Do you want to add another question? (yes/no): ", end="")
         continue_choice = input().strip().lower()
         if continue_choice == 'no':
