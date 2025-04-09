@@ -1,0 +1,45 @@
+Title: quiz data
+Description: common knowledge
+--------------------------------------------------
+Q1: What is the third planet from the Sun?
+a) Mercury
+b) Venus
+c) Earth
+d) Mars
+Correct Answer: c
+--------------------------------------------------
+Q2: What is the capital of France?
+a) Berlin
+b) Paris
+c) Madrid
+d) Rome
+Correct Answer: b
+--------------------------------------------------
+Q3: Which planet is known as the "Red Planet"?
+a) Venus
+b) Jupiter
+c) Saturn
+d) Mars
+Correct Answer: d
+--------------------------------------------------
+Q4: Who wrote the play "Romeo and Juliet"?
+a) Charles Dickens
+b) William Shakespeare
+c) Mark Twain
+d) Jane Austen
+Correct Answer: b
+--------------------------------------------------
+Q5: What is the boiling point of water at sea level?
+a) 90�C
+b) 100�C
+c) 110�C
+d) 120�C
+Correct Answer: b
+--------------------------------------------------
+Q6: Which ocean is the largest?
+a) Pacific Ocean
+b) Atlantic Ocean
+c) Arctic Ocean
+d) Indian Ocean
+Correct Answer: a
+--------------------------------------------------
