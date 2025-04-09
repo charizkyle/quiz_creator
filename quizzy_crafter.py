@@ -13,10 +13,10 @@ def create_quiz():
             print(f"\nQuestion {question_counter}:")
             question_text = input("Enter a question: ")
             print("Enter 4 options:")
-            a = input("a) ")
-            b = input("b) ")
-            c = input("c) ")
-            d = input("d) ")
+            choice_a = input("a) ")
+            choice_b = input("b) ")
+            choice_c = input("c) ")
+            choice_d = input("d) ")
 
             correct_answer = input("Enter the correct answer (a, b, c, d): ").lower()
             while correct_answer not in ['a', 'b', 'c', 'd']:
