@@ -1,4 +1,5 @@
 def create_quiz():
+    print("Welcome to Quizzy Crafter!")
     quiz_title = input("Enter the quiz title: ")
     quiz_description = input("Enter the quiz description: ")
 
