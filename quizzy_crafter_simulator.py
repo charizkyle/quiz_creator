@@ -41,6 +41,15 @@ def start_menu():
 
     switch_frame(frame)
 
+# Show "Create Quiz" Screen
+def create_quiz():
+    frame = tk.Frame(root)
+    tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+    switch_frame(frame)
+
+# Show "Take Quiz" Screen
+
 # ---------- START ----------
 # Start the application
 start_menu()
