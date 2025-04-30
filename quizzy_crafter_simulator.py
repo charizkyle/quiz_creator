@@ -41,6 +41,7 @@ def start_menu():
 
     # Add buttons to the main screen
     tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=380)
+    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#004477").place(x=300, y=460)
 
     switch_frame(frame)
 
