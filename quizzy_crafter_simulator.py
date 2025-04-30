@@ -22,7 +22,15 @@ button_images = {
     "take": load_button_image("assets/take_button.png"),
 }
 
+# Create a function to switch between frames
 current_frame = None
+
+def switch_frame(new_frame):
+    global current_frame
+    if current_frame:
+        current_frame.destroy()
+    current_frame = new_frame
+    current_frame.pack(fill="both", expand=True)
 
 # ---------- SCREENS ----------
 
@@ -30,8 +38,9 @@ current_frame = None
 def start_menu():
     frame = tk.Frame(root)
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
-    
+
     switch_frame(frame)
+
 # ---------- START ----------
 # Start the application
 start_menu()
