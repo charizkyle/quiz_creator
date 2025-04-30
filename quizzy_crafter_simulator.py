@@ -39,6 +39,9 @@ def start_menu():
     frame = tk.Frame(root)
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
+    # Add buttons to the main screen
+    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=380)
+
     switch_frame(frame)
 
 # Show "Create Quiz" Screen
