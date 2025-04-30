@@ -21,3 +21,18 @@ button_images = {
     "create": load_button_image("assets/create_button.png"),
     "take": load_button_image("assets/take_button.png"),
 }
+
+current_frame = None
+
+# ---------- SCREENS ----------
+
+# Set up the main screen
+def start_menu():
+    frame = tk.Frame(root)
+    tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
+    
+    switch_frame(frame)
+# ---------- START ----------
+# Start the application
+start_menu()
+root.mainloop()
