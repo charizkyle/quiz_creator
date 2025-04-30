@@ -40,8 +40,8 @@ def start_menu():
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     # Add buttons to the main screen
-    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=400)
-    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#004477").place(x=300, y=480)
+    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=430)
+    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#004477").place(x=300, y=510)
 
     switch_frame(frame)
 
