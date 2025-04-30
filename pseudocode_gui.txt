@@ -1,0 +1,9 @@
+# Quizzy Crafter with a simple GUI application
+
+# Set up tkinter window with fixed size and title
+# Load Background Images (Start Screen, Create Quiz, Take Quiz)
+# Load Button Images for the main screen (Create Quiz and Take Quiz)
+# Set up the main screen with buttons for creating and taking quizzes
+# Show Create Quiz Screen
+# Show Take Quiz Screen
+# Start the application
