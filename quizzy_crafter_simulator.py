@@ -52,6 +52,11 @@ def create_quiz():
     switch_frame(frame)
 
 # Show "Take Quiz" Screen
+def take_quiz():
+    frame = tk.Frame(root)
+    tk.Label(frame, image=take_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+    switch_frame(frame)
 
 # ---------- START ----------
 # Start the application
