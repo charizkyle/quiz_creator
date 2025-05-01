@@ -1,4 +1,6 @@
+# Import necessary libraries
 import tkinter as tk
+from tkinter import font as tkFont
 from PIL import Image, ImageTk
 
 # ---------- SETUP ----------
@@ -21,6 +23,9 @@ button_images = {
     "create": load_button_image("assets/create_button.png"),
     "take": load_button_image("assets/take_button.png"),
 }
+
+# Load Font
+custom_font = tkFont.Font(family="Arial", size=14)
 
 # Create a function to switch between frames
 current_frame = None
@@ -51,11 +56,11 @@ def create_quiz():
     tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     # Create Quiz Title and Description Entry Fields
-    tk.Label(frame, text="Quiz Title:", bg="#004477", fg="white").place(x=50, y=50)
+    tk.Label(frame, text="Quiz Title:", font=custom_font, bg="#004477", fg="white").place(x=50, y=50)
     title_entry = tk.Entry(frame, width=30, bg="#004477", fg="light pink")
     title_entry.place(x=150, y=50)
 
-    tk.Label(frame, text="Description:", bg="#004477", fg="white").place(x=50, y=100)
+    tk.Label(frame, text="Description:", font=custom_font, bg="#004477", fg="white").place(x=50, y=100)
     desc_entry = tk.Entry(frame, width=30, bg="#004477", fg="light pink")
     desc_entry.place(x=150, y=100)
 
