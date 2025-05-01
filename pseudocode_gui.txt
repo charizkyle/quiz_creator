@@ -10,5 +10,6 @@
 # Set up the main screen with buttons for creating and taking quizzes
 # Show Create Quiz Screen
     # Create Quiz Title and Description Entry Fields
+    # Store input into QuizManager
 # Show Take Quiz Screen
 # Start the application
