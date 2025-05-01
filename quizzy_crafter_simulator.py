@@ -50,6 +50,15 @@ def create_quiz():
     frame = tk.Frame(root)
     tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
+    # Create Quiz Title and Description Entry Fields
+    tk.Label(frame, text="Quiz Title:", bg="#004477", fg="white").place(x=50, y=50)
+    title_entry = tk.Entry(frame, width=30, bg="#004477", fg="light pink")
+    title_entry.place(x=150, y=50)
+
+    tk.Label(frame, text="Description:", bg="#004477", fg="white").place(x=50, y=100)
+    desc_entry = tk.Entry(frame, width=30, bg="#004477", fg="light pink")
+    desc_entry.place(x=150, y=100)
+
     switch_frame(frame)
 
 # Show "Take Quiz" Screen
