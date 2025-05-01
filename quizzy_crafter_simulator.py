@@ -25,7 +25,7 @@ button_images = {
 }
 
 # Load Font
-custom_font = tkFont.Font(family="Arial", size=14)
+custom_font = tkFont.Font(family="consolas", size=14)
 
 # Create a function to switch between frames
 current_frame = None
@@ -57,11 +57,11 @@ def create_quiz():
 
     # Create Quiz Title and Description Entry Fields
     tk.Label(frame, text="Quiz Title:", font=custom_font, bg="#004477", fg="white").place(x=20, y=120)
-    title_entry = tk.Entry(frame, width=40, bg="#004477", fg="light pink")
+    title_entry = tk.Entry(frame, font=custom_font, width=40, bg="#004477", fg="light pink")
     title_entry.place(x=180, y=120)
 
     tk.Label(frame, text="Description:", font=custom_font, bg="#004477", fg="white").place(x=20, y=180)
-    desc_entry = tk.Entry(frame, width=40, bg="#004477", fg="light pink")
+    desc_entry = tk.Entry(frame, font=custom_font, width=40, bg="#004477", fg="light pink")
     desc_entry.place(x=180, y=180)
 
     switch_frame(frame)
