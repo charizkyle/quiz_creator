@@ -6,5 +6,6 @@
 # Create a function to switch between frames
 # Set up the main screen with buttons for creating and taking quizzes
 # Show Create Quiz Screen
+    # Create Quiz Title and Description Entry Fields
 # Show Take Quiz Screen
 # Start the application
