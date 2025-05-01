@@ -14,7 +14,7 @@ start_bg = ImageTk.PhotoImage(Image.open("assets/start_bg.png").resize((800, 600
 create_bg = ImageTk.PhotoImage(Image.open("assets/create_bg.png").resize((800, 600)))
 take_bg = ImageTk.PhotoImage(Image.open("assets/take_bg.png").resize((800, 600)))
 
-# Load Button Images for the main screen
+# Load Button Images
 def load_button_image(path):
     img = Image.open(path).convert("RGBA")
     return ImageTk.PhotoImage(img.resize((200, 60)))
@@ -22,6 +22,7 @@ def load_button_image(path):
 button_images = {
     "create": load_button_image("assets/create_button.png"),
     "take": load_button_image("assets/take_button.png"),
+    "next": load_button_image("assets/next_button.png"),
 }
 
 # Load Font
@@ -81,6 +82,9 @@ def create_quiz():
     def proceed():
         quiz_manager.title = title_entry.get()
         quiz_manager.description = desc_entry.get()
+
+    # Add a "Next" button to proceed to the question input screen
+    tk.Button(frame, image=button_images["next"], command=lambda: proceed(), borderwidth=0, bg="#004477").place(x=300, y=430)
 
     switch_frame(frame)
 
