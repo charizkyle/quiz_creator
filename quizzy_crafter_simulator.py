@@ -77,6 +77,11 @@ def create_quiz():
     desc_entry = tk.Entry(frame, font=custom_font, width=40, bg="#004477", fg="light pink")
     desc_entry.place(x=180, y=180)
 
+    # Store input into QuizManager
+    def proceed():
+        quiz_manager.title = title_entry.get()
+        quiz_manager.description = desc_entry.get()
+
     switch_frame(frame)
 
 # Show "Take Quiz" Screen
