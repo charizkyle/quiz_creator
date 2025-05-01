@@ -3,7 +3,7 @@
 # Import necessary libraries
 # Set up tkinter window with fixed size and title
 # Load Background Images (Start Screen, Create Quiz, Take Quiz)
-# Load Button Images for the main screen (Create Quiz and Take Quiz)
+# Load Button Images
 # Load Font
 # Create a function to switch between frames
 # Implement a Quiz Manager
@@ -11,5 +11,6 @@
 # Show Create Quiz Screen
     # Create Quiz Title and Description Entry Fields
     # Store input into QuizManager
+    # Add a "Next" Button to proceed to the question input screen
 # Show Take Quiz Screen
 # Start the application
