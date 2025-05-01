@@ -37,6 +37,19 @@ def switch_frame(new_frame):
     current_frame = new_frame
     current_frame.pack(fill="both", expand=True)
 
+# ---------- QUIZ MANAGER ----------
+# Implement a Quiz Manager
+class QuizManager:
+    def __init__(self):
+        self.title = ""
+        self.description = ""
+
+    def reset(self):
+        self.title = ""
+        self.description = ""
+
+quiz_manager = QuizManager()
+
 # ---------- SCREENS ----------
 
 # Set up the main screen
