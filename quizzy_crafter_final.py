@@ -90,8 +90,8 @@ def start_menu():
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     # Add "Create Quiz" and "Take Quiz" buttons to the main screen
-    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=430)
-    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#004477").place(x=300, y=510)
+    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#1f628e").place(x=300, y=430)
+    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#1f628e").place(x=300, y=510)
 
     switch_frame(frame)
 
@@ -117,7 +117,7 @@ def create_quiz():
         enter_questions()
 
     # Add a "Next" button to proceed to the question input screen
-    tk.Button(frame, image=button_images["next"], command=lambda: proceed(), borderwidth=0, bg="#004477").place(x=300, y=430)
+    tk.Button(frame, image=button_images["next"], command=lambda: proceed(), borderwidth=0, bg="#1f628e").place(x=300, y=430)
 
     switch_frame(frame)
 
@@ -157,8 +157,8 @@ def enter_questions():
         start_menu()
 
     # Add “Add Question” and “Save” buttons
-    tk.Button(frame, image=button_images["add_question"], command=lambda: add_question(), borderwidth=0, bg="#004477").place(x=100, y=500)
-    tk.Button(frame, image=button_images["save"], command=lambda: save(), borderwidth=0, bg="#004477").place(x=500, y=500)
+    tk.Button(frame, image=button_images["add_question"], command=lambda: add_question(), borderwidth=0, bg="#1f628e").place(x=100, y=500)
+    tk.Button(frame, image=button_images["save"], command=lambda: save(), borderwidth=0, bg="#1f628e").place(x=500, y=500)
 
     switch_frame(frame)
 
