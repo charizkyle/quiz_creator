@@ -31,4 +31,6 @@
     # Display the current question and its options
     # Stores the selected answer letter
     # Proceed to the next question of the quiz
+    # Allow to move back to the previous question
+    # Add "Next" and "Back" buttons
 # Start the application
