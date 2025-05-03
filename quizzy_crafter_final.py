@@ -214,6 +214,15 @@ def start_quiz_questions(user_name):
         btn.place(x=20, y=210 + i * 50)
         option_buttons.append(btn)
 
+    # Stores the selected answer letter
+    def select_answer(idx):
+        selected_answer[0] = chr(97 + idx)
+        for i, btn in enumerate(option_buttons):
+            if i == idx:
+                btn.config(bg="white", fg="#004477")
+            else:
+                btn.config(bg="#004477", fg="light pink")
+
 # ---------- START ----------
 # Start the application
 start_menu()
