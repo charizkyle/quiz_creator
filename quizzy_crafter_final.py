@@ -146,6 +146,12 @@ def enter_questions():
             for entry in entries:
                 entry.delete(0, tk.END)
 
+    # Finalize the quiz
+    def save():
+        add_question()
+        quiz_manager.save_quiz()
+        start_menu()
+
     switch_frame(frame)
 
 # Show "Take Quiz" Screen
