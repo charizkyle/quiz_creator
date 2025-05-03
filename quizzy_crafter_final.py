@@ -132,8 +132,8 @@ def enter_questions():
 
     for idx, text in enumerate(labels):
         tk.Label(frame, text=text, font=custom_font, bg="#004477", fg="white").place(x=20, y=y_positions[idx])
-        entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
-        entry.place(x=180, y=y_positions[idx])
+        entry = tk.Entry(frame, width=50, font=custom_font, bg="#004477", fg="light pink")
+        entry.place(x=200, y=y_positions[idx])
         entries.append(entry)
 
     # Add each typed-in questions to quiz_manager.questions
