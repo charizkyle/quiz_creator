@@ -121,9 +121,9 @@ def create_quiz():
 
     switch_frame(frame)
 
-# Add input fields for quiz questions, options, and correct answers
+# Add input fields for question, options, and correct answer
 def enter_questions():
-    frame = tk.Label(root)
+    frame = tk.Frame(root)
     tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     entries = []
@@ -156,7 +156,7 @@ def enter_questions():
         quiz_manager.save_quiz()
         start_menu()
 
-    # Add "Add Question" and "Save" buttons
+    # Add “Add Question” and “Save” buttons
     tk.Button(frame, image=button_images["add_question"], command=lambda: add_question(), borderwidth=0, bg="#004477").place(x=100, y=500)
     tk.Button(frame, image=button_images["save"], command=lambda: save(), borderwidth=0, bg="#004477").place(x=500, y=500)
 
