@@ -29,6 +29,8 @@ button_images = {
     "create": load_button_image("assets/create_button.png"),
     "take": load_button_image("assets/take_button.png"),
     "next": load_button_image("assets/next_button.png"),
+    "add_question": load_button_image("assets/add_question_button.png"),
+    "save": load_button_image("assets/save_button.png")
 }
 
 # Load Font
@@ -129,7 +131,7 @@ def enter_questions():
     y_positions = [120, 180, 240, 300, 360, 420]
 
     for idx, text in enumerate(labels):
-        tk.Label(frame, text=text, font=custom_font, bg="004477", fg="white").place(x=20, y=y_positions[idx])
+        tk.Label(frame, text=text, font=custom_font, bg="#004477", fg="white").place(x=20, y=y_positions[idx])
         entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
         entry.place(x=180, y=y_positions[idx])
         entries.append(entry)
