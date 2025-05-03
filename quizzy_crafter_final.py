@@ -205,7 +205,7 @@ def start_quiz_questions(user_name):
     user_answers = []
 
     question_label = tk.Label(frame, text="", font=custom_font, bg="#004477", fg="light pink", wraplength=700)
-    question_label.place(x=20, y=150)
+    question_label.place(x=50, y=120)
 
     option_buttons = []
 
