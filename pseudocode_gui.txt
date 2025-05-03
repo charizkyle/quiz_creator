@@ -15,5 +15,6 @@
     # Create Quiz Title and Description Entry Fields
     # Store input into QuizManager
     # Add a "Next" Button to proceed to the question input screen
+# Add input fields for quiz questions, options and correct answers
 # Show Take Quiz Screen
 # Start the application
