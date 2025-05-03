@@ -128,7 +128,7 @@ def enter_questions():
 
     entries = []
     labels = ["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer \n(a/b/c/d)"]
-    y_positions = [120, 180, 240, 300, 360, 420]
+    y_positions = [150, 210, 260, 310, 360, 410]
 
     for idx, text in enumerate(labels):
         tk.Label(frame, text=text, font=custom_font, bg="#004477", fg="white").place(x=20, y=y_positions[idx])
