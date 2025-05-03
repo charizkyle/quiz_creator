@@ -24,4 +24,5 @@
     # Finalize the quiz
     # Add "Add Question" and "Save" buttons
 # Show Take Quiz Screen
+    # Add name entry field
 # Start the application
