@@ -95,6 +95,7 @@ def start_menu():
 
 # Show "Create Quiz" Screen
 def create_quiz():
+    quiz_manager.reset() # to start over
     frame = tk.Frame(root)
     tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -111,6 +112,7 @@ def create_quiz():
     def proceed():
         quiz_manager.title = title_entry.get()
         quiz_manager.description = desc_entry.get()
+        enter_questions()
 
     # Add a "Next" button to proceed to the question input screen
     tk.Button(frame, image=button_images["next"], command=lambda: proceed(), borderwidth=0, bg="#004477").place(x=300, y=430)
