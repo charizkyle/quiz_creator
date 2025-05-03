@@ -156,6 +156,10 @@ def enter_questions():
         quiz_manager.save_quiz()
         start_menu()
 
+    # Add "Add Question" and "Save" buttons
+    tk.Button(frame, image=button_images["add_question"], command=lambda: add_question(), borderwidth=0, bg="#004477").place(x=100, y=500)
+    tk.Button(frame, image=button_images["save"], command=lambda: save(), borderwidth=0, bg="#004477").place(x=500, y=500)
+
     switch_frame(frame)
 
 # Show "Take Quiz" Screen
