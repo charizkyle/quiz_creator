@@ -105,6 +105,22 @@ def enter_questions():
         entry.place(x=180, y=y_positions[idx])
         entries.append(entry)
 
+    # Add each typed-in questions to quiz_manager.questions
+    def add_question():
+        question_text = entries[0].get()
+        options = [entries[i].get() for i in range(1, 5)]
+        correct_answer = entries[5].get().lower()
+        if question_text and all(options) and correct_answer:
+            quiz_manager.questions.append({
+                "question": question_text,
+                "options": options,
+                "answer": correct_answer
+            })
+            for entry in entries:
+                entry.delete(0, tk.END)
+
+    switch_frame(frame)
+
 # Show "Take Quiz" Screen
 def take_quiz():
     frame = tk.Frame(root)
