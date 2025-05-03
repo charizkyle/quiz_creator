@@ -41,10 +41,12 @@ def switch_frame(new_frame):
 # ---------- QUIZ MANAGER ----------
 # Implement a Quiz Manager
 class QuizManager:
+    # Store basic quiz information
     def __init__(self):
         self.title = ""
         self.description = ""
 
+    # Reset the quiz if the user wants to start over
     def reset(self):
         self.title = ""
         self.description = ""
@@ -58,7 +60,7 @@ def start_menu():
     frame = tk.Frame(root)
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
-    # Add buttons to the main screen
+    # Add "Create Quiz" and "Take Quiz" buttons to the main screen
     tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#004477").place(x=300, y=430)
     tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#004477").place(x=300, y=510)
 
