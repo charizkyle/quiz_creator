@@ -14,7 +14,9 @@ root.resizable(False, False)
 
 # Set a directory for quizzes
 QUIZ_FOLDER = "quizzes"
+RESULTS_FOLDER = "quiz_results"
 os.makedirs(QUIZ_FOLDER, exist_ok=True)
+os.makedirs(RESULTS_FOLDER, exist_ok=True)
 
 # Load Background Images
 start_bg = ImageTk.PhotoImage(Image.open("assets/start_bg.png").resize((800, 600)))
