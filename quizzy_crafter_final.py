@@ -230,6 +230,19 @@ def start_quiz_questions(user_name):
             else:
                 btn.config(bg="#004477", fg="light pink")
 
+    # Proceed to the next question of the quiz
+    def next_question():
+        user_answers.append({
+            "question": quiz_manager.questions[question_index[0]]["question"],
+            "answer": selected_answer[0]
+        })
+        selected_answer[0] = None
+        question_index[0] += 1
+        if question_index[0] >= len(quiz_manager.questions):
+            print("End of quiz")
+        else:
+            load_question()
+
 # ---------- START ----------
 # Start the application
 start_menu()
