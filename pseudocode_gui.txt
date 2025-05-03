@@ -16,5 +16,6 @@
     # Store input into QuizManager
     # Add a "Next" Button to proceed to the question input screen
 # Add input fields for quiz questions, options and correct answers
+    # Add each typed-in questions to quiz_manager.questions
 # Show Take Quiz Screen
 # Start the application
