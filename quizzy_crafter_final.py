@@ -1,6 +1,8 @@
 # Import necessary libraries
 import tkinter as tk
 from tkinter import font as tkFont
+import json
+import os
 from PIL import Image, ImageTk
 
 # ---------- SETUP ----------
@@ -8,6 +10,10 @@ root = tk.Tk()
 root.title("Quizzy Crafter Simulator")
 root.geometry("800x600")
 root.resizable(False, False)
+
+# Set a directory for quizzes
+QUIZ_FOLDER = "quizzes"
+os.makedirs(QUIZ_FOLDER, exist_ok=True)
 
 # Load Background Images
 start_bg = ImageTk.PhotoImage(Image.open("assets/start_bg.png").resize((800, 600)))
@@ -102,7 +108,7 @@ def enter_questions():
     y_positions = [120, 180, 240, 300, 360, 420]
 
     for idx, text in enumerate(labels):
-        tk.Label(frame, text=text, font=cutom_font, bg="004477", fg="white").place(x=20, y=y_positions[idx])
+        tk.Label(frame, text=text, font=custom_font, bg="004477", fg="white").place(x=20, y=y_positions[idx])
         entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
         entry.place(x=180, y=y_positions[idx])
         entries.append(entry)
