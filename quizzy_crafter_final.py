@@ -59,6 +59,17 @@ class QuizManager:
         self.description = ""
         self.questions = []
 
+    # Save quiz data to a JSON file
+    def save_quiz(self):
+        filename = os.path.join(QUIZ_FOLDER, f"{self.title.replace(' ', '_')}.json")
+        data = {
+            "title": self.title,
+            "description": self.description,
+            "questions": self.questions
+        }
+        with open(filename, 'w') as f:
+            json.dump(data, f, indent=4)
+
 quiz_manager = QuizManager()
 
 # ---------- SCREENS ----------
