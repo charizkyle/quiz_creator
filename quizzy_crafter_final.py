@@ -90,6 +90,21 @@ def create_quiz():
 
     switch_frame(frame)
 
+# Add input fields for quiz questions, options, and correct answers
+def enter_questions():
+    frame = tk.Label(root)
+    tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+    entries = []
+    labels = ["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer"]
+    y_positions = [120, 180, 240, 300, 360, 420]
+
+    for idx, text in enumerate(labels):
+        tk.Label(frame, text=text, font=cutom_font, bg="004477", fg="white").place(x=20, y=y_positions[idx])
+        entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
+        entry.place(x=180, y=y_positions[idx])
+        entries.append(entry)
+
 # Show "Take Quiz" Screen
 def take_quiz():
     frame = tk.Frame(root)
