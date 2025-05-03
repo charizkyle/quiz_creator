@@ -192,8 +192,27 @@ def take_quiz():
         show_quizzes(user_name)
 
     tk.Button(frame, image=button_images["next"], command=lambda: start(), borderwidth=0, bg="#1f628e").place(x=300, y=450)
-    
+
     switch_frame(frame)
+
+# Start Quiz Questions
+def start_quiz_questions(user_name):
+    frame = tk.Frame(root)
+    tk.Label(frame, image=take_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+    question_index =[0]
+    selected_answer = [None]
+    user_answers = []
+
+    question_label = tk.Label(frame, text="", font=custom_font, bg="#004477", fg="light pink", wraplength=700)
+    question_label.place(x=20, y=150)
+
+    option_buttons = []
+
+    for i in range(4):
+        btn = tk.Button(frame, width=50, font=custom_font, bg="#004477", fg="light pink", anchor='w')
+        btn.place(x=20, y=210 + i * 50)
+        option_buttons.append(btn)
 
 # ---------- START ----------
 # Start the application
