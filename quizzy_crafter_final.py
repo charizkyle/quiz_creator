@@ -167,6 +167,11 @@ def take_quiz():
     frame = tk.Frame(root)
     tk.Label(frame, image=take_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
+    # Add name entry field
+    tk.Label(frame, text="Enter your name:", font=custom_font, bg="#004477", fg="white").place(x=20, y=250)
+    name_entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
+    name_entry.place(x=200, y=250)
+
     switch_frame(frame)
 
 # ---------- START ----------
