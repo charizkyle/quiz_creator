@@ -70,6 +70,14 @@ class QuizManager:
         with open(filename, 'w') as f:
             json.dump(data, f, indent=4)
 
+    # Load existing quizzes
+    def load_quiz(self, filename):
+        with open(os.path.join(QUIZ_FOLDER, filename), 'r') as f:
+            data = json.load(f)
+        self.title = data['title']
+        self.description = data['description']
+        self.questions = data['questions']
+
 quiz_manager = QuizManager()
 
 # ---------- SCREENS ----------
