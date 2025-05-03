@@ -249,6 +249,13 @@ def start_quiz_questions(user_name):
             question_index[0] -= 1
             load_question()
 
+    # Add "Next" and "Back" buttons
+    tk.Button(frame, image=button_images["next"], command=lambda: next_question(), borderwidth=0, bg="#1f628e").place(x=500, y=500)
+    tk.Button(frame, image=button_images["add_question"], command=lambda: prev_question(), borderwidth=0, bg="#1f628e").place(x=100, y=500)
+
+    load_question()
+    switch_frame(frame)
+
 # ---------- START ----------
 # Start the application
 start_menu()
