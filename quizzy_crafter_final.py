@@ -243,6 +243,12 @@ def start_quiz_questions(user_name):
         else:
             load_question()
 
+    # Allow to move back to the previous question
+    def prev_question():
+        if question_index[0] > 0:
+            question_index[0] -= 1
+            load_question()
+
 # ---------- START ----------
 # Start the application
 start_menu()
