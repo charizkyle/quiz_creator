@@ -214,6 +214,13 @@ def start_quiz_questions(user_name):
         btn.place(x=20, y=210 + i * 50)
         option_buttons.append(btn)
 
+    # Display current question and its options
+    def load_question():
+        current_question = quiz_manager.questions[question_index[0]]
+        question_label.config(text=current_question["question"])
+        for idx, option in enumerate(current_question["options"]):
+            option_buttons[idx].config(text=f"{chr(97 + idx)} {option}", command=lambda i=idx: select_answer(i))
+
     # Stores the selected answer letter
     def select_answer(idx):
         selected_answer[0] = chr(97 + idx)
