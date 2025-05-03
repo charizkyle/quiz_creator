@@ -33,7 +33,8 @@ button_images = {
     "take": load_button_image("assets/take_button.png"),
     "next": load_button_image("assets/next_button.png"),
     "add_question": load_button_image("assets/add_question_button.png"),
-    "save": load_button_image("assets/save_button.png")
+    "save": load_button_image("assets/save_button.png"),
+    "back": load_button_image("assets/back_button.png"),
 }
 
 # Load Font
