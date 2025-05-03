@@ -28,5 +28,6 @@
     # Load existing quizzes
     # Validate the name entry
 # Start Quiz Questions
+    # Display the current question and its options
     # Stores the selected answer letter
 # Start the application
