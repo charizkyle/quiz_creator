@@ -183,6 +183,14 @@ def take_quiz():
             start_menu()
             return
 
+    # Validate the name entry
+    def start():
+        user_name = name_entry.get()
+        if not user_name:
+            messagebox.showwarning("Name Required", "Please enter your name.")
+            return
+        show_quizzes(user_name)
+
     switch_frame(frame)
 
 # ---------- START ----------
