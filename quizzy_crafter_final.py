@@ -127,7 +127,7 @@ def enter_questions():
     tk.Label(frame, image=create_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     entries = []
-    labels = ["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer"]
+    labels = ["Question", "Option A", "Option B", "Option C", "Option D", "Correct Answer \n(a/b/c/d)"]
     y_positions = [120, 180, 240, 300, 360, 420]
 
     for idx, text in enumerate(labels):
