@@ -2,6 +2,7 @@
 
 # Import necessary libraries
 # Set up tkinter window with fixed size and title
+# Set a directory for quizzes
 # Load Background Images (Start Screen, Create Quiz, Take Quiz)
 # Load Button Images
 # Load Font
@@ -20,5 +21,7 @@
     # Add a "Next" Button to proceed to the question input screen
 # Add input fields for quiz questions, options and correct answers
     # Add each typed-in questions to quiz_manager.questions
+    # Finalize the quiz
+    # Add "Add Question" and "Save" buttons
 # Show Take Quiz Screen
 # Start the application
