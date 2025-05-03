@@ -191,6 +191,8 @@ def take_quiz():
             return
         show_quizzes(user_name)
 
+    tk.Button(frame, image=button_images["next"], command=lambda: start(), borderwidth=0, bg="#1f628e").place(x=300, y=450)
+    
     switch_frame(frame)
 
 # ---------- START ----------
