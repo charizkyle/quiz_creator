@@ -1,4 +1,4 @@
-# Quizzy Crafter with a simple GUI application
+# Quizzy Crafter for creating and taking quizzes with a simple GUI application
 
 # Import necessary libraries
 # Set up tkinter window with fixed size and title
