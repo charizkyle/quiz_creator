@@ -211,7 +211,7 @@ def start_quiz_questions(user_name):
 
     for i in range(4):
         btn = tk.Button(frame, width=50, font=custom_font, bg="#004477", fg="light pink", anchor='w')
-        btn.place(x=20, y=210 + i * 50)
+        btn.place(x=150, y=180 + i * 55)
         option_buttons.append(btn)
 
     # Display current question and its options
