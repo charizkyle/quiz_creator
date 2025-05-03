@@ -45,11 +45,13 @@ class QuizManager:
     def __init__(self):
         self.title = ""
         self.description = ""
+        self.questions = [] # Store questions being added
 
     # Reset the quiz if the user wants to start over
     def reset(self):
         self.title = ""
         self.description = ""
+        self.questions = []
 
 quiz_manager = QuizManager()
 

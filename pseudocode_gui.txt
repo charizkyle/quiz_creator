@@ -8,6 +8,7 @@
 # Create a function to switch between frames
 # Implement a Quiz Manager
     # Store basic quiz information
+        # Store questions being added
     # Reset the quiz if the user wants to start over
 # Set up the main screen
     # Add "Create Quiz" and "Take Quiz" buttons to the main screen
