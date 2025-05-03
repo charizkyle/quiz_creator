@@ -173,7 +173,7 @@ def take_quiz():
     # Add name entry field
     tk.Label(frame, text="Enter your name:", font=custom_font, bg="#004477", fg="white").place(x=20, y=250)
     name_entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
-    name_entry.place(x=200, y=250)
+    name_entry.place(x=180, y=300)
 
     # Load existing quizzes
     def show_quizzes(user_name):
