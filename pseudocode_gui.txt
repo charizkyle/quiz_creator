@@ -30,4 +30,5 @@
 # Start Quiz Questions
     # Display the current question and its options
     # Stores the selected answer letter
+    # Proceed to the next question of the quiz
 # Start the application
