@@ -1,6 +1,7 @@
 # Import necessary libraries
 import tkinter as tk
 from tkinter import font as tkFont
+from tkinter import messagebox
 import json
 import os
 from PIL import Image, ImageTk
@@ -171,6 +172,14 @@ def take_quiz():
     tk.Label(frame, text="Enter your name:", font=custom_font, bg="#004477", fg="white").place(x=20, y=250)
     name_entry = tk.Entry(frame, width=40, font=custom_font, bg="#004477", fg="light pink")
     name_entry.place(x=200, y=250)
+
+    # Load existing quizzes
+    def show_quizzes(user_name):
+        quiz_files = [f for f in os.listdir(QUIZ_FOLDER) if f.endswith('.json')]
+        if not quiz_files:
+            messagebox.showinfo("No Quizzes", "No quizzes available.")
+            start_menu()
+            return
 
     switch_frame(frame)
 
