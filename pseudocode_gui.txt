@@ -26,6 +26,7 @@
 # Show Take Quiz Screen
     # Add name entry field
     # Load existing quizzes
+        # Add a quiz selection
     # Validate the name entry
 # Start Quiz Questions
     # Display the current question and its options
