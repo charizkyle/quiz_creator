@@ -304,7 +304,13 @@ def show_score(user_name, score, user_answers):
     tk.Label(frame, image=score_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     # Adjust "Your Score:" to match the location of the pink bar
-    title_label = tk.Label(frame, text=f"Your Score: {score}/{len(quiz_manager.questions)}", font=custom_font fg="white", bg="#e88e93")
+    title_label = tk.Label(
+        frame,
+        text=f"Your Score: {score}/{len(quiz_manager.questions)}",
+        font=tkFont.Font(family="consolas", size=16),
+        fg="white",
+        bg="#e88e93",
+    )
     title_label.place(x=310, y=50)
 
     # Save Results
