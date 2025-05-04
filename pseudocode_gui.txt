@@ -42,5 +42,6 @@
     # Allow to move back to the previous question
     # Add "Next" and "Back" buttons
 # Show Score Screen
+    # Adjust "Your Score:" to match the location of the pink bar
     # Save Results
 # Start the application
