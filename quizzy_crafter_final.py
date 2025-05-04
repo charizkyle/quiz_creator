@@ -80,13 +80,13 @@ class QuizManager:
             "description": self.description,
             "questions": self.questions
         }
-        with open(filename, 'w') as f:
-            json.dump(data, f, indent=4)
+        with open(filename, 'w') as file:
+            json.dump(data, file, indent=4)
 
     # Load existing quizzes
     def load_quiz(self, filename):
-        with open(os.path.join(QUIZ_FOLDER, filename), 'r') as f:
-            data = json.load(f)
+        with open(os.path.join(QUIZ_FOLDER, filename), 'r') as file:
+            data = json.load(file)
         self.title = data['title']
         self.description = data['description']
         self.questions = data['questions']
@@ -150,7 +150,7 @@ def enter_questions():
     # Add each typed-in questions to quiz_manager.questions
     def add_question():
         question_text = entries[0].get()
-        options = [entries[i].get() for i in range(1, 5)]
+        options = [entries[idx].get() for idx in range(1, 5)]
         correct_answer = entries[5].get().lower()
         if question_text and all(options) and correct_answer:
             quiz_manager.questions.append({
@@ -185,7 +185,7 @@ def take_quiz():
 
     # Load existing quizzes
     def show_quizzes(user_name):
-        quiz_files = [f for f in os.listdir(QUIZ_FOLDER) if f.endswith('.json')]
+        quiz_files = [file for file in os.listdir(QUIZ_FOLDER) if file.endswith('.json')]
         if not quiz_files:
             messagebox.showinfo("No Quizzes", "No quizzes available.")
             start_menu()
@@ -206,14 +206,14 @@ def take_quiz():
         scrollbar = tk.Scrollbar(quiz_selection_frame, orient="vertical", command=canvas.yview)
         scroll_frame = tk.Frame(canvas, bg="#004477")
 
-        scroll_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        scroll_frame.bind("<Configure>", lambda event: canvas.configure(scrollregion=canvas.bbox("all")))
         canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
 
         # Add quiz buttons to the scrollable frame
         for quiz in quiz_files:
             btn = tk.Button(scroll_frame, text=quiz.replace("_quiz.json", ""), font=custom_font,
-                            command=lambda f=quiz: [play_click_sound(), select_quiz(f)], bg="#004477", fg="light pink")
+                            command=lambda quiz_file=quiz: [play_click_sound(), select_quiz(quiz_file)], bg="#004477", fg="light pink")
             btn.pack(pady=5, padx=20, anchor="center")
 
         # Place canvas and scrollbar
@@ -253,9 +253,9 @@ def start_quiz_questions(user_name):
 
     option_buttons = []
 
-    for i in range(4):
+    for idx in range(4):
         btn = tk.Button(frame, width=50, font=custom_font, bg="#004477", fg="light pink", anchor='w')
-        btn.place(x=150, y=180 + i * 55)
+        btn.place(x=150, y=180 + idx * 55)
         option_buttons.append(btn)
 
     # Display current question and its options
@@ -263,13 +263,13 @@ def start_quiz_questions(user_name):
         current_question = quiz_manager.questions[question_index[0]]
         question_label.config(text=current_question["question"])
         for idx, option in enumerate(current_question["options"]):
-            option_buttons[idx].config(text=f"{chr(97+idx)}) {option}", command=lambda i=idx: select_answer(i))
+            option_buttons[idx].config(text=f"{chr(97+idx)}) {option}", command=lambda opt_idx=idx: select_answer(opt_idx))
 
     # Stores the selected answer letter
     def select_answer(idx):
         selected_answer[0] = chr(97 + idx)
-        for i, btn in enumerate(option_buttons):
-            if i == idx:
+        for btn_idx, btn in enumerate(option_buttons):
+            if btn_idx == idx:
                 btn.config(bg="white", fg="#004477")
             else:
                 btn.config(bg="#004477", fg="light pink")
@@ -337,7 +337,7 @@ def show_score(user_name, score, user_answers):
 
         tk.Label(
             scroll_frame,
-            text=f"Q{idx+1}: {qtext[:50]}...",
+            text=f"Question{idx+1}: {qtext[:50]}...",
             font=tkFont.Font(family="consolas", size=10),
             bg="white",
             fg="lightpink"
@@ -366,11 +366,11 @@ def show_score(user_name, score, user_answers):
     # Save Results
     def save_and_exit():
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
-        with open(result_path, "w") as f:
-            f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
+        with open(result_path, "w") as file:
+            file.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
             # Show the summary of answers
             for answer in user_answers:
-                f.write(f"Q: {answer['question']}\nYour Answer: {answer['answer']}\nCorrect Answer: {quiz_manager.questions[user_answers.index(answer)]['answer']}\n\n")
+                file.write(f"Question: {answer['question']}\nYour Answer: {answer['answer']}\nCorrect Answer: {quiz_manager.questions[user_answers.index(answer)]['answer']}\n\n")
         start_menu()
 
     # Add "Submit" button to save the quiz results
