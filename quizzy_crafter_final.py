@@ -183,6 +183,16 @@ def take_quiz():
             messagebox.showinfo("No Quizzes", "No quizzes available.")
             start_menu()
             return
+        
+        # Add quiz selection
+        quiz_selection_frame = tk.Frame(root)
+        tk.Label(quiz_selection_frame, image=take_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+        tk.Label(quiz_selection_frame, text="Select a Quiz:", font=custom_font, bg="#004477", fg="white").pack(pady=150)
+
+        def select_quiz(filename):
+            quiz_manager.load_quiz(filename)
+            start_quiz_questions(user_name)
 
     # Validate the name entry
     def start():
