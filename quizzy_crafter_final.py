@@ -209,6 +209,14 @@ def take_quiz():
                             command=lambda f=quiz: select_quiz(f), bg="#004477", fg="light pink")
             btn.pack(pady=5, padx=20, anchor="center")
 
+        # Place canvas and scrollbar
+        canvas.place(x=50, y=200, width=700, height=300)
+        scrollbar.place(x=750, y=200, height=300)
+
+        tk.Button(quiz_selection_frame, image=button_images["back"], command=lambda: start_menu(), borderwidth=0, bg="#1f628e").place(x=300, y=500)
+
+        switch_frame(quiz_selection_frame)
+
     # Validate the name entry
     def start():
         user_name = name_entry.get()
