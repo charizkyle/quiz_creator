@@ -44,5 +44,6 @@
     # Add "Next" and "Back" buttons
 # Show Score Screen
     # Adjust "Your Score:" to match the location of the pink bar
+    # Scrollable frame for user answers
     # Save Results
 # Start the application

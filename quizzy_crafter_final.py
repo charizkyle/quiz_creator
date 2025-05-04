@@ -332,8 +332,8 @@ def show_score(user_name, score, user_answers):
     canvas.configure(yscrollcommand=scrollbar.set)
 
     for idx, answer in enumerate(user_answers):
-        qtext = user_answer["question"]
-        user_text = user_answer["answer"]
+        qtext = user_answers["question"]
+        user_text = user_answers["answer"]
         correct_text = quiz_manager.questions[idx]["answer"]
 
         tk.Label(
