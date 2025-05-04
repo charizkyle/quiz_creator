@@ -345,7 +345,7 @@ def show_score(user_name, score, user_answers):
 
         tk.Label(
             scroll_frame,
-            text=f"Your: {user_text}",
+            text=f"Your answer: {user_text}",
             font=tkFont.Font(family="consolas", size=10),
             bg="white",
             fg="lightpink"
