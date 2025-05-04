@@ -6,7 +6,8 @@
 # Load Background Images (Start Screen, Create Quiz, Take Quiz)
 # Load Button Images
 # Load Font
-# Create a function to switch between frames
+# Global State
+# Load Sound Effects for Buttons
 # Implement a Quiz Manager
     # Store basic quiz information
         # Store questions being added
