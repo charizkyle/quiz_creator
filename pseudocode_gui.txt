@@ -28,6 +28,7 @@
     # Load existing quizzes
         # Add a quiz selection
         # Scrollable list of quizzes
+        # Add quiz buttons to the scrollable frame
     # Validate the name entry
 # Start Quiz Questions
     # Display the current question and its options
