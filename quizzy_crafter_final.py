@@ -194,6 +194,15 @@ def take_quiz():
             quiz_manager.load_quiz(filename)
             start_quiz_questions(user_name)
 
+        # Scrollable list of quizzes
+        canvas = tk.Canvas(quiz_selection_frame, bg="#004477", highlightthickness=0)
+        scrollbar = tk.Scrollbar(quiz_selection_frame, orient="vertical", command=canvas.yview)
+        scroll_frame = tk.Frame(canvas, bg="#004477")
+
+        scroll_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
+        canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
+        canvas.configure(yscrollcommand=scrollbar.set)
+
     # Validate the name entry
     def start():
         user_name = name_entry.get()
