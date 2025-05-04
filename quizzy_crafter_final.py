@@ -320,6 +320,11 @@ def show_score(user_name, score, user_answers):
             f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
         start_menu()
 
+    # Add "Submit" button to save the quiz results
+    tk.Button(frame, image=button_images["submit"], command=lambda: save_and_exit(), borderwidth=0, bg="#1f628e").place(x=300, y=500)   
+
+    switch_frame(frame)
+
 # ---------- START ----------
 # Start the application
 start_menu()
