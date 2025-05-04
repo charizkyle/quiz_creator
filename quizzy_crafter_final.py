@@ -326,50 +326,50 @@ def show_score(user_name, score, user_answers):
 
     scroll_frame.bind(
         "<Configure>",
-        lambda e: canvas.configure(scrollregion=canvas.bbox("all")),  
+        lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
     )
     canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
     canvas.configure(yscrollcommand=scrollbar.set)
 
-    for idx, answer in enumerate(user_answers):
-        qtext = user_answers["question"]
-        user_text = user_answers["answer"]
+    for idx, user_answer in enumerate(user_answers):
+        qtext = user_answer["question"]
+        user_text = user_answer["answer"]
         correct_text = quiz_manager.questions[idx]["answer"]
 
         tk.Label(
             scroll_frame,
             text=f"Q{idx+1}: {qtext[:50]}...",
-            font=custom_font,
+            font=tkFont.Font(family="consolas", size=10),
             bg="white",
-            fg="light pink"
+            fg="lightpink"
         ).pack(anchor="w", pady=2)
 
         tk.Label(
             scroll_frame,
             text=f"Your: {user_text}",
-            font=custom_font,
+            font=tkFont.Font(family="consolas", size=10),
             bg="white",
-            fg="light pink"
+            fg="lightpink"
         ).pack(anchor="w", pady=2)
 
         color = "green" if user_text == correct_text else "red"
         tk.Label(
             scroll_frame,
             text=f"Correct: {correct_text}",
-            font=custom_font,
+            font=tkFont.Font(family="consolas", size=10),
             bg="white",
             fg=color
         ).pack(anchor="w", pady=2)
 
-    canvas.place(x=50, y=150, width=700, height=300) # Adjust placement to fit inside the white bubble
-    scrollbar.place(x=750, y=150, height=300)
+    canvas.place(x=80, y=160, width=600, height=300)  # Adjust to fit inside the white bubble
+    scrollbar.place(x=680, y=160, height=300)
 
     # Save Results
     def save_and_exit():
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
         with open(result_path, "w") as f:
             f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
-            # Show the questions and answers in the results file
+            # Show the summary of answers
             for answer in user_answers:
                 f.write(f"Q: {answer['question']}\nYour Answer: {answer['answer']}\nCorrect Answer: {quiz_manager.questions[user_answers.index(answer)]['answer']}\n\n")
         start_menu()
