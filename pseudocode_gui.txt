@@ -32,6 +32,7 @@
         # Place canvas and scrollbar
     # Validate the name entry
 # Start Quiz Questions
+    # Shuffle the questions
     # Display the current question and its options
     # Stores the selected answer letter
     # Proceed to the next question of the quiz
