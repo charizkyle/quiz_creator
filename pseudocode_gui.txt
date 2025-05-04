@@ -38,4 +38,5 @@
     # Proceed to the next question of the quiz
     # Allow to move back to the previous question
     # Add "Next" and "Back" buttons
+# Show Score Screen
 # Start the application
