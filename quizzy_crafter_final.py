@@ -44,7 +44,7 @@ button_images = {
 # Load Font
 custom_font = tkFont.Font(family="consolas", size=14)
 
-# Create a function to switch between frames
+# Global State
 current_frame = None
 
 def switch_frame(new_frame):
