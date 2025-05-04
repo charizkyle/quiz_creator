@@ -369,6 +369,9 @@ def show_score(user_name, score, user_answers):
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
         with open(result_path, "w") as f:
             f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
+            # Show the questions and answers in the results file
+            for answer in user_answers:
+                f.write(f"Q: {answer['question']}\nYour Answer: {answer['answer']}\nCorrect Answer: {quiz_manager.questions[user_answers.index(answer)]['answer']}\n\n")
         start_menu()
 
     # Add "Submit" button to save the quiz results
