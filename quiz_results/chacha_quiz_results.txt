@@ -1,0 +1,20 @@
+User: chacha
+Quiz: Test Quiz 6
+Score: 3/4
+
+Question: Which volcano erupted in 1991 and caused massive damage in Luzon?
+Your Answer: c
+Correct Answer: d
+
+Question: What does OPM stand for?
+Your Answer: a
+Correct Answer: a
+
+Question: What is the national dish of the Philippines?
+Your Answer: b
+Correct Answer: b
+
+Question: Who sang the OPM hit "Buwan"?
+Your Answer: b
+Correct Answer: b
+

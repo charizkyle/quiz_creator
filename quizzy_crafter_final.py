@@ -333,7 +333,7 @@ def show_score(user_name, score, user_answers):
     for idx, user_answer in enumerate(user_answers):
         qtext = user_answer["question"]
         user_text = user_answer["answer"]
-        correct_text = quiz_manager.questions[idx]["answer"]
+        correct_text = quiz_manager.questions[user_answers.index(user_answer)]["answer"]
 
         tk.Label(
             scroll_frame,
