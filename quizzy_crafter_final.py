@@ -301,6 +301,12 @@ def show_score(user_name, score, user_answers):
     frame = tk.Frame(root)
     tk.Label(frame, image=score_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
+    # Save Results
+    def save_and_exit():
+        result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
+        with open(result_path, "w") as f:
+            f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
+
 # ---------- START ----------
 # Start the application
 start_menu()
