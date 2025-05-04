@@ -33,6 +33,7 @@
     # Validate the name entry
 # Start Quiz Questions
     # Shuffle the questions
+    # Store score as a list to modify it inside functions
     # Display the current question and its options
     # Stores the selected answer letter
     # Proceed to the next question of the quiz
