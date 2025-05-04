@@ -5,6 +5,7 @@ from tkinter import messagebox
 import json
 import os
 from PIL import Image, ImageTk
+import random
 
 # ---------- SETUP ----------
 root = tk.Tk()
@@ -233,6 +234,8 @@ def take_quiz():
 def start_quiz_questions(user_name):
     frame = tk.Frame(root)
     tk.Label(frame, image=take_bg).place(x=0, y=0, relwidth=1, relheight=1)
+
+    random.shuffle(quiz_manager.questions)  # Shuffle questions
 
     question_index =[0]
     selected_answer = [None]
