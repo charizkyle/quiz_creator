@@ -47,4 +47,5 @@
     # Scrollable frame for user answers
         # Adjust placement to fit inside the white bubble
     # Save Results
+        # Show the questions and answers in the results file
 # Start the application
