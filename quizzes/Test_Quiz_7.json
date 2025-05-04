@@ -1,0 +1,56 @@
+{
+    "title": "Test Quiz 7",
+    "description": "Trial 7",
+    "questions": [
+        {
+            "question": "Which Filipino artist sang \"Tadhana\"?",
+            "options": [
+                "December Avenue",
+                "Up Dharma Down",
+                "Zack Tabudlo",
+                "KZ Tandingan"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "What is the oldest city in the Philippines?",
+            "options": [
+                "Vigan",
+                "Cebu City",
+                "Davao City",
+                "Manila"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "Who is dubbed as the \"Asia's Songbird\"?",
+            "options": [
+                "Regine Velasquez",
+                "Sarah Geronimo",
+                "Jaya",
+                "Kyla"
+            ],
+            "answer": "a"
+        },
+        {
+            "question": "Which Filipino rapper is behind the viral hit \"Panalo\"?",
+            "options": [
+                "Shanti Dope",
+                "Gloc-9",
+                "Flow G",
+                "Ez Mil"
+            ],
+            "answer": "d"
+        },
+        {
+            "question": "What Filipino festival is celebrated in Kalibo, Aklan every January?",
+            "options": [
+                "Sinulog",
+                "Panagbenga",
+                "Pahiyas",
+                "Ati-Atihan"
+            ],
+            "answer": "d"
+        }
+    ]
+}

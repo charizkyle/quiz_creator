@@ -1,0 +1,46 @@
+{
+    "title": "Test Quiz 6",
+    "description": "Trial 6",
+    "questions": [
+        {
+            "question": "What does OPM stand for?",
+            "options": [
+                "Original Pilipino Music",
+                "Official Pinoy Music",
+                "Outstanding Performance Music",
+                "Only Pinoy Music"
+            ],
+            "answer": "a"
+        },
+        {
+            "question": "Which volcano erupted in 1991 and caused massive damage in Luzon?",
+            "options": [
+                "Mayon Volcano",
+                "Mount Apo",
+                "Taal Volcano",
+                "Mount Pinatubo"
+            ],
+            "answer": "d"
+        },
+        {
+            "question": "Who sang the OPM hit \"Buwan\"?",
+            "options": [
+                "Ben&Ben",
+                "Juan Karlos",
+                "Moira Dela Torre",
+                "Arthur Nery"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "What is the national dish of the Philippines?",
+            "options": [
+                "Sinigang",
+                "Adobo",
+                "Lechon",
+                "Kare-Kare"
+            ],
+            "answer": "b"
+        }
+    ]
+}

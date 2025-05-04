@@ -1,0 +1,46 @@
+{
+    "title": "Test Quiz 3",
+    "description": "Trial 3",
+    "questions": [
+        {
+            "question": "What is the tallest mountain in the world?",
+            "options": [
+                "K2",
+                "Mount Kilimanjaro",
+                "Mount Everest",
+                "Mount Fuji"
+            ],
+            "answer": "c"
+        },
+        {
+            "question": "Which country invented paper?",
+            "options": [
+                "Egypt",
+                "China",
+                "Greece",
+                "India"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "How many hearts does an octopus have?",
+            "options": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "answer": "c"
+        },
+        {
+            "question": "Who painted the \"Mona Lisa\"?",
+            "options": [
+                "Vincent van Gogh",
+                "Pablo Picasso",
+                "Leonardo da Vinci",
+                "Michaelangelo"
+            ],
+            "answer": "c"
+        }
+    ]
+}

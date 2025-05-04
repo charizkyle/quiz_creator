@@ -1,0 +1,56 @@
+{
+    "title": "Test Quiz 4",
+    "description": "Trial 4",
+    "questions": [
+        {
+            "question": "What is the longest river in the world?",
+            "options": [
+                "Amazon River",
+                "Nile River",
+                "Yangtze River",
+                "Mississippi River"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "Which country is famous for inventing pizza?",
+            "options": [
+                "France",
+                "Italy",
+                "Spain",
+                "Greece"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "Who is known as the \"King of Pop\"?",
+            "options": [
+                "Elvis Presley",
+                "Justin Bieber",
+                "Michael Jackson",
+                "Prince"
+            ],
+            "answer": "c"
+        },
+        {
+            "question": "What city is known as the \"City of Love\"?",
+            "options": [
+                "Venice",
+                "New York",
+                "Rome",
+                "Paris"
+            ],
+            "answer": "d"
+        },
+        {
+            "question": "Which fruit is known for having its seeds on the outside?",
+            "options": [
+                "Blueberry",
+                "Apple",
+                "Strawberry",
+                "Cherry"
+            ],
+            "answer": "c"
+        }
+    ]
+}
