@@ -272,6 +272,8 @@ def start_quiz_questions(user_name):
 
     # Proceed to the next question of the quiz
     def next_question():
+        if selected_answer[0] == quiz_manager.questions[question_index[0]]["answer"]:
+            score[0] += 1 # Increment score if the answer is correct
         user_answers.append({
             "question": quiz_manager.questions[question_index[0]]["question"],
             "answer": selected_answer[0]
