@@ -241,6 +241,7 @@ def start_quiz_questions(user_name):
 
     question_index =[0]
     selected_answer = [None]
+    score = [0] # Store score as a list to modify it inside functions
     user_answers = []
 
     question_label = tk.Label(frame, text="", font=custom_font, bg="#004477", fg="light pink", wraplength=700)
