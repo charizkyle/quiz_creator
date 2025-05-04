@@ -361,6 +361,9 @@ def show_score(user_name, score, user_answers):
             fg=color
         ).pack(anchor="w", pady=2)
 
+    canvas.place(x=50, y=150, width=700, height=300) # Adjust placement to fit inside the white bubble
+    scrollbar.place(x=750, y=150, height=300)
+
     # Save Results
     def save_and_exit():
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
