@@ -5,6 +5,7 @@ from tkinter import messagebox
 import json
 import os
 from PIL import Image, ImageTk
+import winsound
 import random
 
 # ---------- SETUP ----------
@@ -53,6 +54,10 @@ def switch_frame(new_frame):
     current_frame = new_frame
     current_frame.pack(fill="both", expand=True)
 
+# Load Sound Effects
+def play_click_sound():
+    winsound.PlaySound("assets/click.wav", winsound.SND_FILENAME)
+
 # ---------- QUIZ MANAGER ----------
 # Implement a Quiz Manager
 class QuizManager:
@@ -97,8 +102,8 @@ def start_menu():
     tk.Label(frame, image=start_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
     # Add "Create Quiz" and "Take Quiz" buttons to the main screen
-    tk.Button(frame, image=button_images["create"], command=lambda: create_quiz(), borderwidth=0, bg="#1f628e").place(x=300, y=430)
-    tk.Button(frame, image=button_images["take"], command=lambda: take_quiz(), borderwidth=0, bg="#1f628e").place(x=300, y=510)
+    tk.Button(frame, image=button_images["create"], command=lambda: [play_click_sound(), create_quiz()], borderwidth=0, bg="#1f628e").place(x=300, y=430)
+    tk.Button(frame, image=button_images["take"], command=lambda: [play_click_sound(), take_quiz()], borderwidth=0, bg="#1f628e").place(x=300, y=510)
 
     switch_frame(frame)
 
@@ -124,7 +129,7 @@ def create_quiz():
         enter_questions()
 
     # Add a "Next" button to proceed to the question input screen
-    tk.Button(frame, image=button_images["next"], command=lambda: proceed(), borderwidth=0, bg="#1f628e").place(x=300, y=430)
+    tk.Button(frame, image=button_images["next"], command=lambda: [play_click_sound(), proceed()], borderwidth=0, bg="#1f628e").place(x=300, y=430)
 
     switch_frame(frame)
 
@@ -164,8 +169,8 @@ def enter_questions():
         start_menu()
 
     # Add “Add Question” and “Save” buttons
-    tk.Button(frame, image=button_images["add_question"], command=lambda: add_question(), borderwidth=0, bg="#1f628e").place(x=100, y=500)
-    tk.Button(frame, image=button_images["save"], command=lambda: save(), borderwidth=0, bg="#1f628e").place(x=500, y=500)
+    tk.Button(frame, image=button_images["add_question"], command=lambda: [play_click_sound(), add_question()], borderwidth=0, bg="#1f628e").place(x=100, y=500)
+    tk.Button(frame, image=button_images["save"], command=lambda: [play_click_sound(), save()], borderwidth=0, bg="#1f628e").place(x=500, y=500)
 
     switch_frame(frame)
 
@@ -209,14 +214,14 @@ def take_quiz():
         # Add quiz buttons to the scrollable frame
         for quiz in quiz_files:
             btn = tk.Button(scroll_frame, text=quiz.replace("_quiz.json", ""), font=custom_font,
-                            command=lambda f=quiz: select_quiz(f), bg="#004477", fg="light pink")
+                            command=lambda f=quiz: [play_click_sound(), select_quiz(f)], bg="#004477", fg="light pink")
             btn.pack(pady=5, padx=20, anchor="center")
 
         # Place canvas and scrollbar
         canvas.place(x=50, y=200, width=700, height=300)
         scrollbar.place(x=750, y=200, height=300)
 
-        tk.Button(quiz_selection_frame, image=button_images["back"], command=lambda: start_menu(), borderwidth=0, bg="#1f628e").place(x=300, y=500)
+        tk.Button(quiz_selection_frame, image=button_images["back"], command=lambda: [play_click_sound(), start_menu()], borderwidth=0, bg="#1f628e").place(x=300, y=500)
 
         switch_frame(quiz_selection_frame)
 
@@ -228,7 +233,7 @@ def take_quiz():
             return
         show_quizzes(user_name)
 
-    tk.Button(frame, image=button_images["next"], command=lambda: start(), borderwidth=0, bg="#1f628e").place(x=300, y=450)
+    tk.Button(frame, image=button_images["next"], command=lambda: [play_click_sound(), start()], borderwidth=0, bg="#1f628e").place(x=300, y=450)
 
     switch_frame(frame)
 
@@ -269,6 +274,7 @@ def start_quiz_questions(user_name):
                 btn.config(bg="white", fg="#004477")
             else:
                 btn.config(bg="#004477", fg="light pink")
+        play_click_sound()
 
     # Proceed to the next question of the quiz
     def next_question():
@@ -292,8 +298,8 @@ def start_quiz_questions(user_name):
             load_question()
 
     # Add "Next" and "Back" buttons
-    tk.Button(frame, image=button_images["next"], command=lambda: next_question(), borderwidth=0, bg="#1f628e").place(x=500, y=500)
-    tk.Button(frame, image=button_images["back"], command=lambda: prev_question(), borderwidth=0, bg="#1f628e").place(x=100, y=500)
+    tk.Button(frame, image=button_images["next"], command=lambda: [play_click_sound(), next_question()], borderwidth=0, bg="#1f628e").place(x=500, y=500)
+    tk.Button(frame, image=button_images["back"], command=lambda: [play_click_sound(), prev_question()], borderwidth=0, bg="#1f628e").place(x=100, y=500)
 
     load_question()
     switch_frame(frame)
@@ -321,7 +327,7 @@ def show_score(user_name, score, user_answers):
         start_menu()
 
     # Add "Submit" button to save the quiz results
-    tk.Button(frame, image=button_images["submit"], command=lambda: save_and_exit(), borderwidth=0, bg="#1f628e").place(x=300, y=500)   
+    tk.Button(frame, image=button_images["submit"], command=lambda: [play_click_sound(), save_and_exit()], borderwidth=0, bg="#1f628e").place(x=300, y=500)   
 
     switch_frame(frame)
 
