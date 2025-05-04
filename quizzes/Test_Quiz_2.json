@@ -1,0 +1,36 @@
+{
+    "title": "Test Quiz 2",
+    "description": "Trial 2",
+    "questions": [
+        {
+            "question": "What is the largest ocean?",
+            "options": [
+                "Pacific Ocean",
+                "Atlantic Ocean",
+                "Arctic Ocean",
+                "Indian Ocean"
+            ],
+            "answer": "a"
+        },
+        {
+            "question": "What is the boiling point of water at sea level?",
+            "options": [
+                "90 degrees Celsius",
+                "100 degrees Celsius",
+                "110 degrees Celsius",
+                "120 degrees Celsius"
+            ],
+            "answer": "b"
+        },
+        {
+            "question": "What is the capital city of the Philippines?",
+            "options": [
+                "Davao City",
+                "Cebu City",
+                "Quezon City",
+                "Manila"
+            ],
+            "answer": "d"
+        }
+    ]
+}
