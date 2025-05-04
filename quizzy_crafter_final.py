@@ -319,6 +319,48 @@ def show_score(user_name, score, user_answers):
     )
     title_label.place(x=310, y=50)
 
+    # Scrollable frame for user answers
+    canvas = tk.Canvas(frame, bg="white", highlightthickness=0)
+    scrollbar = tk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+    scroll_frame = tk.Frame(canvas, bg="white")
+
+    scroll_frame.bind(
+        "<Configure>",
+        lambda e: canvas.configure(scrollregion=canvas.bbox("all")),  
+    )
+    canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    for idx, answer in enumerate(user_answers):
+        qtext = user_answer["question"]
+        user_text = user_answer["answer"]
+        correct_text = quiz_manager.questions[idx]["answer"]
+
+        tk.Label(
+            scroll_frame,
+            text=f"Q{idx+1}: {qtext[:50]}...",
+            font=custom_font,
+            bg="white",
+            fg="light pink"
+        ).pack(anchor="w", pady=2)
+
+        tk.Label(
+            scroll_frame,
+            text=f"Your: {user_text}",
+            font=custom_font,
+            bg="white",
+            fg="light pink"
+        ).pack(anchor="w", pady=2)
+
+        color = "green" if user_text == correct_text else "red"
+        tk.Label(
+            scroll_frame,
+            text=f"Correct: {correct_text}",
+            font=custom_font,
+            bg="white",
+            fg=color
+        ).pack(anchor="w", pady=2)
+
     # Save Results
     def save_and_exit():
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
