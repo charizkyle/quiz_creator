@@ -59,7 +59,6 @@ def play_click_sound():
     winsound.PlaySound("assets/click.wav", winsound.SND_FILENAME)
 
 # ---------- QUIZ MANAGER ----------
-# Implement a Quiz Manager
 class QuizManager:
     # Store basic quiz information
     def __init__(self):
