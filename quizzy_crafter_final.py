@@ -318,6 +318,7 @@ def show_score(user_name, score, user_answers):
         result_path = os.path.join(RESULTS_FOLDER, f"{user_name}_quiz_results.txt")
         with open(result_path, "w") as f:
             f.write(f"User: {user_name}\nQuiz: {quiz_manager.title}\nScore: {score}/{len(quiz_manager.questions)}\n\n")
+        start_menu()
 
 # ---------- START ----------
 # Start the application
