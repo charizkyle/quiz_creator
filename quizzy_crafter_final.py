@@ -298,7 +298,7 @@ def start_quiz_questions(user_name):
 # Show Score Screen
 def show_score(user_name, score, user_answers):
     frame = tk.Frame(root)
-
+    tk.Label(frame, image=score_bg).place(x=0, y=0, relwidth=1, relheight=1)
 
 # ---------- START ----------
 # Start the application
