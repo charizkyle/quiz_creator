@@ -14,7 +14,7 @@ root.title("Quizzy Crafter Simulator")
 root.geometry("800x600")
 root.resizable(False, False)
 
-# Set a directory for quizzes
+# Set directories for quizzes and quiz results
 QUIZ_FOLDER = "quizzes"
 RESULTS_FOLDER = "quiz_results"
 os.makedirs(QUIZ_FOLDER, exist_ok=True)

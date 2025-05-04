@@ -2,7 +2,7 @@
 
 # Import necessary libraries
 # Set up tkinter window with fixed size and title
-# Set a directory for quizzes
+# Set directories for quizzes and quiz results
 # Load Background Images (Start Screen, Create Quiz, Take Quiz)
 # Load Button Images
 # Load Font
