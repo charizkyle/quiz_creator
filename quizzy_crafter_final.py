@@ -281,7 +281,7 @@ def start_quiz_questions(user_name):
         selected_answer[0] = None
         question_index[0] += 1
         if question_index[0] >= len(quiz_manager.questions):
-            print("End of quiz")
+            show_score(user_name, score[0], user_answers) # Show final score
         else:
             load_question()
 
