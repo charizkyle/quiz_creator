@@ -45,5 +45,6 @@
 # Show Score Screen
     # Adjust "Your Score:" to match the location of the pink bar
     # Scrollable frame for user answers
+        # Adjust placement to fit inside the white bubble
     # Save Results
 # Start the application
