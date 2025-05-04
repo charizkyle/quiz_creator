@@ -23,6 +23,7 @@ os.makedirs(RESULTS_FOLDER, exist_ok=True)
 start_bg = ImageTk.PhotoImage(Image.open("assets/start_bg.png").resize((800, 600)))
 create_bg = ImageTk.PhotoImage(Image.open("assets/create_bg.png").resize((800, 600)))
 take_bg = ImageTk.PhotoImage(Image.open("assets/take_bg.png").resize((800, 600)))
+score_bg = ImageTk.PhotoImage(Image.open("assets/score_bg.png").resize((800, 600)))
 
 # Load Button Images
 def load_button_image(path):
@@ -36,6 +37,7 @@ button_images = {
     "add_question": load_button_image("assets/add_question_button.png"),
     "save": load_button_image("assets/save_button.png"),
     "back": load_button_image("assets/back_button.png"),
+    "submit": load_button_image("assets/submit_button.png"),
 }
 
 # Load Font
@@ -292,6 +294,11 @@ def start_quiz_questions(user_name):
 
     load_question()
     switch_frame(frame)
+
+# Show Score Screen
+def show_score(user_name, score, user_answers):
+    frame = tk.Frame(root)
+
 
 # ---------- START ----------
 # Start the application
