@@ -203,6 +203,12 @@ def take_quiz():
         canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
         canvas.configure(yscrollcommand=scrollbar.set)
 
+        # Add quiz buttons to the scrollable frame
+        for quiz in quiz_files:
+            btn = tk.Button(scroll_frame, text=quiz.replace("_quiz.json", ""), font=custom_font,
+                            command=lambda f=quiz: select_quiz(f), bg="#004477", fg="light pink")
+            btn.pack(pady=5, padx=20, anchor="center")
+
     # Validate the name entry
     def start():
         user_name = name_entry.get()
